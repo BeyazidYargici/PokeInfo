@@ -16,7 +16,7 @@ Libraries
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.0"
     
 ## Navigation
-    implementation "android.arch.navigation:navigation-fragment:$navigation_version"
-    implementation "android.arch.navigation:navigation-ui:$navigation_version"
-    implementation "android.arch.navigation:navigation-fragment-ktx:$navigation_version"
-    implementation "android.arch.navigation:navigation-ui-ktx:$navigation_version"
+    implementation "android.arch.navigation:navigation-fragment:1.0.0-alpha06"
+    implementation "android.arch.navigation:navigation-ui:1.0.0-alpha06"
+    implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha06"
+    implementation "android.arch.navigation:navigation-ui-ktx:1.0.0-alpha06"
