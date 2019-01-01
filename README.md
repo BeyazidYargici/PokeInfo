@@ -5,11 +5,11 @@ Android App with MVVM, Architecture Components (ViewModel, LiveData, Navigation,
 Libraries
 
 ## Dependency Injection with Dagger2
-    implementation "com.google.dagger: dagger:2.19"
-    implementation "com.google.dagger:dagger-android:2.19"
-    implementation 'com.google.dagger:dagger-android-support:2.19'
-    kapt "com.google.dagger:dagger-compiler:2.19"
-    kapt "com.google.dagger:dagger-android-processor:2.19"
+    implementation "com.google.dagger: dagger:2.20"
+    implementation "com.google.dagger:dagger-android:2.20"
+    implementation 'com.google.dagger:dagger-android-support:2.20'
+    kapt "com.google.dagger:dagger-compiler:2.20"
+    kapt "com.google.dagger:dagger-android-processor:2.20"
 
 ## Kotlin Android Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.0'
