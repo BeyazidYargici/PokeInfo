@@ -2,7 +2,7 @@ package com.beyazidyargici.pokeinfo.di.module
 
 import androidx.room.Room
 import com.beyazidyargici.pokeinfo.PokeApp
-import com.beyazidyargici.pokeinfo.data.PokeDB
+import com.beyazidyargici.pokeinfo.data.db.PokeDB
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

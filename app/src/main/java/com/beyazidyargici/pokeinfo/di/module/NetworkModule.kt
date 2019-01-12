@@ -1,8 +1,8 @@
 package com.beyazidyargici.pokeinfo.di.module
 
 import com.beyazidyargici.pokeinfo.PokeApp
-import com.beyazidyargici.pokeinfo.data.ApiService
-import com.beyazidyargici.pokeinfo.data.BASE_URL
+import com.beyazidyargici.pokeinfo.data.network.ApiService
+import com.beyazidyargici.pokeinfo.data.network.BASE_URL
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
@@ -54,7 +54,7 @@ class NetworkModule {
             val url = chain.request()
                 .url()
                 .newBuilder()
-                .addQueryParameter("key", "if there is an apikey")
+//                .addQueryParameter("key", "if there is an apikey")
                 .build()
 
             // request builder
