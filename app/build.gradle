@@ -85,4 +85,8 @@ dependencies {
     kapt "com.google.dagger:dagger-android-processor:2.20"
     kapt 'com.android.tools.build.jetifier:jetifier-core:1.0.0-beta02'
     annotationProcessor 'com.android.tools.build.jetifier:jetifier-core:1.0.0-beta02'
+
+    // Better dateTime-time support even on older Android versions
+    implementation "com.jakewharton.threetenabp:threetenabp:1.1.0"
+
 }

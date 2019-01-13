@@ -5,8 +5,8 @@ import com.google.gson.annotations.SerializedName
 data class PokemonResult(
 
 	@field:SerializedName("name")
-	val name: String? = null,
+	val name: String,
 
 	@field:SerializedName("url")
-	val url: String? = null
+	val url: String
 )

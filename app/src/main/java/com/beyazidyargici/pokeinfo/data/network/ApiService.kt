@@ -1,9 +1,8 @@
 package com.beyazidyargici.pokeinfo.data.network
 
-import com.beyazidyargici.pokeinfo.data.response.AllPokemonResponse
+import com.beyazidyargici.pokeinfo.data.db.entity.AllPokemonEntity
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
-import retrofit2.http.Query
 
 
 const val BASE_URL = "https://pokeapi.co/api/v2/"
@@ -14,5 +13,5 @@ const val BASE_URL = "https://pokeapi.co/api/v2/"
 interface ApiService {
 
     @GET("pokemon")
-    fun getAllPokemons() : Deferred<AllPokemonResponse>
+    fun getAllPokemons() : Deferred<AllPokemonEntity>
 }
