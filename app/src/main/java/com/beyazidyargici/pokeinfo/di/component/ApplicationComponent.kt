@@ -1,20 +1,24 @@
 package com.beyazidyargici.pokeinfo.di.component
 
 import com.beyazidyargici.pokeinfo.PokeApp
-import com.beyazidyargici.pokeinfo.di.module.DatabaseModule
-import com.beyazidyargici.pokeinfo.di.module.NetworkModule
+import com.beyazidyargici.pokeinfo.di.module.*
+import com.beyazidyargici.pokeinfo.di.module.ViewModelModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.support.AndroidSupportInjectionModule
-import javax.inject.Inject
+import javax.inject.Singleton
 
 /**
  *  Created by beyazid on 31.12.2018.
  */
+@Singleton
 @Component(
     modules = [
+        ActivityModule::class,
+        FragmentModule::class,
         NetworkModule::class,
-        DatabaseModule::class,
+        RepositoryModule::class,
+        ViewModelModule::class,
         AndroidSupportInjectionModule::class]
 )
 interface ApplicationComponent {

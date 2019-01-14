@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 
 import com.beyazidyargici.pokeinfo.R
 import com.beyazidyargici.pokeinfo.base.ScopedFragment
@@ -34,6 +35,7 @@ class MyPokemonsFragment : ScopedFragment() {
 
         bindUI()
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -45,14 +47,20 @@ class MyPokemonsFragment : ScopedFragment() {
     // Global.launch is not good option because fragment has a lifecycle.
     // We create ScopedFragment and this fragment extended from ScopedFragment for this reason.
     private fun bindUI() = launch {
-        //currentWeather type of LiveData<UnitSpecificCurrentWeatherEntry> and observer
-        try {
-            val allPokemons = viewModel.pokes.await()
-            Log.e("firstPoke", allPokemons.value?.results?.get(0)?.name)
-
-        }catch (e : Exception){
-            Log.e("firstPoke", e.message)
-        }
-
+        //all pokemons type of LiveData<AllPokemonEntity> and observer
+        val allPokemons = viewModel.pokes.await()
+        allPokemons.observe(this@MyPokemonsFragment, Observer { it ->
+            if (it == null) {
+                return@Observer
+            }
+            Log.e("firstPoke", it.results[0].name)
+        })
     }
+
+
+
+
+
+
+
 }

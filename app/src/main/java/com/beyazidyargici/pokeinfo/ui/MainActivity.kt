@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
 
     private lateinit var navController: NavController
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)

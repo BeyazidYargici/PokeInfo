@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/navigation">
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation"
+            app:startDestination="@+id/myPokemonsFragment">
 
+    <fragment android:id="@+id/myPokemonsFragment"
+              android:name="com.beyazidyargici.pokeinfo.ui.my_pokemons.MyPokemonsFragment"
+              android:label="fr_my_pokemons" tools:layout="@layout/fr_my_pokemons"/>
+    <fragment android:id="@+id/pokedexFragment" android:name="com.beyazidyargici.pokeinfo.ui.pokedex.PokedexFragment"
+              android:label="fr_pokedex" tools:layout="@layout/fr_pokedex"/>
+    <fragment android:id="@+id/battleArenaFragment"
+              android:name="com.beyazidyargici.pokeinfo.ui.battle_arena.BattleArenaFragment"
+              android:label="fr_battle_arena" tools:layout="@layout/fr_battle_arena"/>
 </navigation>
