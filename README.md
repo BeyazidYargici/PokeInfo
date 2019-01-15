@@ -1,4 +1,4 @@
-# PokeInfo
+# PokeInfo (Under Construction)
 Android App with MVVM, Architecture Components (ViewModel, LiveData, Navigation, Room), Dependency Injection (Dagger2), Kotlin Coroutines
 
 
