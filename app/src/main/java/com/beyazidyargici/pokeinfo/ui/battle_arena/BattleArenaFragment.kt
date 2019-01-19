@@ -8,8 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.beyazidyargici.pokeinfo.R
+import com.beyazidyargici.pokeinfo.base.ScopedFragment
 
-class BattleArenaFragment : Fragment() {
+class BattleArenaFragment : ScopedFragment() {
 
     companion object {
         fun newInstance() = BattleArenaFragment()
@@ -27,7 +28,6 @@ class BattleArenaFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(BattleArenaViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 
 }
