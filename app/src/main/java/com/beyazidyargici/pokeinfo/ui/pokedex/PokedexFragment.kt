@@ -9,6 +9,7 @@ import android.view.ViewGroup
 
 import com.beyazidyargici.pokeinfo.R
 import com.beyazidyargici.pokeinfo.base.ScopedFragment
+import com.bumptech.glide.load.engine.bitmap_recycle.IntegerArrayAdapter
 
 class PokedexFragment : ScopedFragment() {
 
