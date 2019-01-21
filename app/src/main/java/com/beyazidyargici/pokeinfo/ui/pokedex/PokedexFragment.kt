@@ -1,15 +1,13 @@
 package com.beyazidyargici.pokeinfo.ui.pokedex
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
+import androidx.lifecycle.ViewModelProviders
 import com.beyazidyargici.pokeinfo.R
 import com.beyazidyargici.pokeinfo.base.ScopedFragment
-import com.bumptech.glide.load.engine.bitmap_recycle.IntegerArrayAdapter
+import javax.inject.Inject
 
 class PokedexFragment : ScopedFragment() {
 
@@ -17,6 +15,8 @@ class PokedexFragment : ScopedFragment() {
         fun newInstance() = PokedexFragment()
     }
 
+    @Inject
+    internal lateinit var pokedexVMFactory: PokedexVMFactory
     private lateinit var viewModel: PokedexViewModel
 
     override fun onCreateView(
@@ -28,7 +28,7 @@ class PokedexFragment : ScopedFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(PokedexViewModel::class.java)
+        viewModel = ViewModelProviders.of(this,this.pokedexVMFactory).get(PokedexViewModel::class.java)
     }
 
 }

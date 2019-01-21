@@ -1,14 +1,13 @@
 package com.beyazidyargici.pokeinfo.ui.battle_arena
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
+import androidx.lifecycle.ViewModelProviders
 import com.beyazidyargici.pokeinfo.R
 import com.beyazidyargici.pokeinfo.base.ScopedFragment
+import javax.inject.Inject
 
 class BattleArenaFragment : ScopedFragment() {
 
@@ -16,6 +15,8 @@ class BattleArenaFragment : ScopedFragment() {
         fun newInstance() = BattleArenaFragment()
     }
 
+    @Inject
+    private lateinit var battleArenaVMFactory: BattleArenaVMFactory
     private lateinit var viewModel: BattleArenaViewModel
 
     override fun onCreateView(
@@ -27,7 +28,7 @@ class BattleArenaFragment : ScopedFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(BattleArenaViewModel::class.java)
+        viewModel = ViewModelProviders.of(this, this.battleArenaVMFactory).get(BattleArenaViewModel::class.java)
     }
 
 }
