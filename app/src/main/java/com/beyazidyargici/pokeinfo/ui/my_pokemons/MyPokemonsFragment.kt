@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 
 import com.beyazidyargici.pokeinfo.R
+import com.beyazidyargici.pokeinfo.adapter.MyPokeAdapter
 import com.beyazidyargici.pokeinfo.base.ScopedFragment
 import dagger.android.support.AndroidSupportInjection
 import kotlinx.coroutines.launch
@@ -22,9 +23,8 @@ class MyPokemonsFragment : ScopedFragment() {
 
     private lateinit var viewModel: MyPokemonsViewModel
 
-    companion object {
-        fun newInstance() = MyPokemonsFragment()
-    }
+    private lateinit var myPokeAdapter: MyPokeAdapter
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
